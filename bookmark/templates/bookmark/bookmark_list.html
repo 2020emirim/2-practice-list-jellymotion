@@ -1,0 +1,34 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bookmark List</title>
+</head>
+<body>
+    <div class='btn-group'>
+        <a href="#" class='btn btn-info'>Add bookmark</a>
+    </div>
+    <p></p>
+       <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Site</th>
+                    <th>URL</th>
+                    <th>Modify</th>
+                    <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+                {%  for bookmark in object_list %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td><a href="#">{{ bookmark.site_name }}</a></td>
+                    <td><a href="{{ bookmark.url }}" target="_blank">{{ bookmark.url }}</a></td>
+                    <td><a href="#" class="btn btn-success btn-sm">Modify</a></td>
+                    <td><a href="#" class="btn btn-danger btn-sm">Delete</a></td>
+                </tr>
+            {%  endfor %}
+            </tbody>
+    </table>
+</body>
+</html>
