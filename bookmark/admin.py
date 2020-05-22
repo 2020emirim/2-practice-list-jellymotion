@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import bookmark
 
-admin.site.register(bookmark)
+from bookmark.models import Bookmark
+
+admin.site.register(Bookmark)
