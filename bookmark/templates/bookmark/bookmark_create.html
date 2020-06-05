@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Bookmark Add</title>
-</head>
-<body>
-    <form action="add/" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Add bookmark">
-    </form>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Add{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Add bookmark" class="btn btn-primary btn-sm">
+</form>
+    <button onclick="history.back()" class="btn btn-info btn-sm">Cancel</button>
+{% endblock %}
